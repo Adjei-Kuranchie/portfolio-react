@@ -23,7 +23,7 @@ const WorkCard = ({ image, alt, iconList, liveUrl }: WorkCard) => {
             {iconList.map((Icon, index: number) => (
               <Icon
                 key={index}
-                className="h-8 w-8 bg-stone-700 rounded-full p-1.5 "
+                className="h-8 w-8 dark:bg-stone-700 bg-stone-300 rounded-full p-1.5 "
               />
             ))}
           </div>

@@ -1,3 +1,4 @@
+import { useTheme } from "@/components/theme-provider.tsx";
 import React from "react";
 
 export interface GlassIconsItem {
@@ -23,11 +24,42 @@ const gradientMapping: Record<string, string> = {
   black: "linear-gradient(hsl(0, 0%, 20%), hsl(0, 0%, 0%))",
 };
 
+// Light mode gradient mapping with subtle colors
+const lightGradientMapping: Record<string, string> = {
+  blue: "linear-gradient(hsl(223, 70%, 70%), hsl(208, 70%, 75%))",
+  purple: "linear-gradient(hsl(283, 70%, 70%), hsl(268, 70%, 75%))",
+  red: "linear-gradient(hsl(3, 70%, 70%), hsl(348, 70%, 75%))",
+  indigo: "linear-gradient(hsl(253, 70%, 70%), hsl(238, 70%, 75%))",
+  orange: "linear-gradient(hsl(43, 70%, 65%), hsl(28, 70%, 70%))",
+  green: "linear-gradient(hsl(123, 60%, 60%), hsl(108, 60%, 65%))",
+  white: "linear-gradient(hsl(0, 0%, 95%), hsl(0, 0%, 85%))",
+  black: "linear-gradient(hsl(0, 0%, 70%), hsl(0, 0%, 60%))", // Subtle gray for light mode
+};
+
 const GlassIcons: React.FC<GlassIconsProps> = ({ items, className }) => {
+  const { theme } = useTheme();
+
+  // Determine if we're in dark mode
+  const isDarkMode =
+    theme === "dark" ||
+    (theme === "system" &&
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches);
+
   const getBackgroundStyle = (color: string = "black"): React.CSSProperties => {
-    if (gradientMapping[color]) {
-      return { background: gradientMapping[color] };
+    const mapping = isDarkMode ? gradientMapping : lightGradientMapping;
+
+    if (mapping[color]) {
+      return { background: mapping[color] };
     }
+
+    // If no mapping exists and it's light mode with default black, use subtle gray
+    if (!isDarkMode && color === "black") {
+      return {
+        background: "linear-gradient(hsl(0, 0%, 70%), hsl(0, 0%, 60%))",
+      };
+    }
+
     return { background: color };
   };
 
@@ -51,7 +83,9 @@ const GlassIcons: React.FC<GlassIconsProps> = ({ items, className }) => {
             className="absolute top-0 left-0 w-full h-full rounded-[1.25em] block transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] origin-[100%_100%] rotate-[15deg] group-hover:[transform:rotate(25deg)_translate3d(-0.5em,-0.5em,0.5em)]"
             style={{
               ...getBackgroundStyle(item.color),
-              boxShadow: "0.5em -0.5em 0.75em hsla(223, 10%, 10%, 0.15)",
+              boxShadow: isDarkMode
+                ? "0.5em -0.5em 0.75em hsla(223, 10%, 10%, 0.15)"
+                : "0.5em -0.5em 0.75em hsla(223, 10%, 10%, 0.08)",
             }}
           ></span>
 

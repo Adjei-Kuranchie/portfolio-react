@@ -79,10 +79,7 @@ export const workContent = [
     description:
       "Effortlessly track attendance using geolocation. Our system allows users to check in with a single tap, automatically verifying their presence at the correct location. Say goodbye to manual roll calls and streamline attendance management with real-time, location-based accuracy. Currently under development.",
     icon: (
-      <a
-        href={"https://github.com/Adjei-Kuranchie/Unitrack"}
-        target="_blank"
-      >
+      <a href={"https://github.com/Adjei-Kuranchie/Unitrack"} target="_blank">
         <Button variant={"secondary"} className="w-8 h-8 p-0">
           <SiGithub className="w-4 h-4" />
         </Button>
@@ -167,14 +164,31 @@ export const calenderData = [
     content: (
       <div>
         <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-          I secured 4th place in the Capture The Flag (CTF) cybersecurity
-          competition organized by CyberTeq, facing competitors from
-          universities across Ghana.
+          I secured 4th place in the 2024 Capture The Flag (CTF) cybersecurity
+          competition organized by CyberTeq, facing very strong problem-solving
+          competitors.
         </p>
         <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
           The competition tested skills in digital forensics, web exploitation,
           cryptography, and network security. It solidified my passion for
           ethical hacking and cyber defense.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "2025 - CyberTeq CTF Competition",
+    content: (
+      <div>
+        <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          We secured 3rd place in the 2025 Capture The Flag (CTF) cybersecurity
+          competition organized by CyberTeq during the CITSA Week for our
+          department.
+        </p>
+        <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          The competition tested skills in digital forensics, web exploitation
+          and cryptography.This competition made me realize that I am not fit
+          for Ethical Hacking since it is too brain-intensive.
         </p>
       </div>
     ),

@@ -32,7 +32,7 @@ export default function HeroSection() {
                 >
                   <a
                     href="#work"
-                    className="group/link inline-flex items-center gap-2 text-lg font-medium px-6 py-3 border-2  border-stone-950 dark:border-white text-stone-900 dark:text-white hover:bg-stone-900 dark:hover:bg-white hover:text-white dark:hover:text-stone-900 transition-all duration-300 "
+                    className="group/link inline-flex items-center gap-2 text-lg font-medium px-6 py-3 border-2  border-stone-950 dark:border-white text-stone-900 dark:text-white hover:bg-stone-900 dark:hover:bg-white hover:text-white dark:hover:text-stone-900 transition-all duration-300"
                   >
                     View Projects
                     <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover/link:translate-x-1" />

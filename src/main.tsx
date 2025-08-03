@@ -10,6 +10,7 @@ createRoot(document.getElementById("root")!).render(
       attribute="class"
       defaultTheme="system"
       enableSystem
+      storageKey="vite-ui-theme"
       disableTransitionOnChange
     >
       <App />
