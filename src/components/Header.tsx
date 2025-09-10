@@ -29,27 +29,21 @@ function Header() {
       name: "Instagram",
       href: "https://instagram.com/kuranchie.a",
       icon: (
-        <SiInstagram
-          className={"hover:fill-white hover:stroke-zinc-950 stroke-[1px]"}
-        />
+        <SiInstagram className={"hover:fill-white hover:stroke-zinc-950 stroke-[1px]"} />
       ),
     },
     {
       name: "LinkedIn",
       href: "https://www.linkedin.com/in/kuranchie/",
       icon: (
-        <SiLinkedin
-          className={"hover:fill-white hover:stroke-zinc-950 stroke-[1px]"}
-        />
+        <SiLinkedin className={"hover:fill-white hover:stroke-zinc-950 stroke-[1px]"} />
       ),
     },
     {
       name: "Github",
-      href: "https://github.com/Adjei-Kuranchie",
+      href: "https://github.com/a-kuranchie",
       icon: (
-        <SiGithub
-          className={"hover:fill-white hover:stroke-zinc-950 stroke-[1px]"}
-        />
+        <SiGithub className={"hover:fill-white hover:stroke-zinc-950 stroke-[1px]"} />
       ),
     },
   ];
@@ -71,9 +65,7 @@ function Header() {
               href="/"
               className="text-xl md:text-2xl font-bold tracking-tighter relative group"
             >
-              <span className="relative z-10 dark:text-white tracking-wider">
-                ADJEI
-              </span>
+              <span className="relative z-10 dark:text-white tracking-wider">ADJEI</span>
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-black dark:bg-white group-hover:w-full transition-all duration-300 ease-in-out"></span>
             </a>
 
